@@ -1,0 +1,8 @@
+[pandama]
+192.168.66.20 ansible_ssh_private_key_file='~/git/test/ansible-vms-test/.vagrant/machines/ansible-cts/virtualbox/private_key'
+192.168.66.21 ansible_ssh_private_key_file='~/git/test/ansible-vms-test/.vagrant/machines/ansible-deb/virtualbox/private_key'
+192.168.66.22 ansible_ssh_private_key_file='~/git/test/ansible-vms-test/.vagrant/machines/ansible-ubt/virtualbox/private_key' ansible_python_interpreter=/usr/bin/python3
+192.168.66.23 ansible_ssh_private_key_file='~/git/test/ansible-vms-test/.vagrant/machines/ansible-mnt/virtualbox/private_key' ansible_python_interpreter=/usr/bin/python3
+
+[pandama:vars]
+ansible_ssh_user='vagrant'
