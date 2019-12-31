@@ -6,15 +6,15 @@
   become_user:   root
   tasks:
     # - import_role:
-    #     name:      ansible-role-init
+    #     name:  ansible-role-init
     # - import_role:
-    #     name:      ansible-role-pip
+    #     name:  ansible-role-pip
     # - import_role:
-    #     name:      ansible-role-ohmyzsh
+    #     name:  ansible-role-ohmyzsh
     #
     - import_role:
-        name:      pandemonium1986.init
+        name:    pandemonium1986.init
     - import_role:
-        name:      pandemonium1986.ansible
+        name:    pandemonium1986.ansible
     - import_role:
-        name:      pandemonium1986.ohmyzsh
+        name:    pandemonium1986.ohmyzsh
