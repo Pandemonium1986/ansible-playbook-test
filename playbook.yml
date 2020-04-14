@@ -1,17 +1,10 @@
 ---
-- name :         The incredible pandemonium tests
-  hosts :        pandama
+- name:          The incredible pandemonium tests
+  hosts:         pandama
   become:        true
   become_method: sudo
   become_user:   root
   tasks:
-    # - import_role:
-    #     name:  ansible-role-init
-    # - import_role:
-    #     name:  ansible-role-pip
-    # - import_role:
-    #     name:  ansible-role-ohmyzsh
-    #
     - import_role:
         name:    pandemonium1986.init
     - import_role:
