@@ -7,3 +7,5 @@
   version: "2.4.1"
 - src:     "pandemonium1986.ohmyzsh"
   version: "2.3.0"
+- src:     "pandemonium1986.kubectl"
+  version: "1.0.0"
