@@ -12,6 +12,6 @@
     - import_role:
         name:    pandemonium1986.ohmyzsh
     - import_role:
-        name:    pandemonium1986.kubectl
-    - import_role:
         name:    pandemonium1986.minikube
+    - import_role:
+        name:    pandemonium1986.kubectx
