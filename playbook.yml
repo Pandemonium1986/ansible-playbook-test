@@ -15,3 +15,9 @@
         name:    pandemonium1986.minikube
     - import_role:
         name:    pandemonium1986.kubectx
+    - import_role:
+        name:    pandemonium1986.k9s
+    - import_role:
+        name:    pandemonium1986.stern
+    - import_role:
+        name:    pandemonium1986.helm
