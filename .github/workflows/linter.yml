@@ -3,7 +3,7 @@ name: "GitHub Super Linter"
 
 on:
   schedule:
-    - cron: "0 12 * * *"
+    - cron: "0 21 * * *"
   push:
     branches:
       - main
@@ -14,20 +14,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: "Lint Code Base"
-    runs-on: ubuntu-latest
+  called-linter:
     permissions:
       contents: read
       packages: read
       statuses: write
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: Lint Code Base
-        uses: super-linter/super-linter/slim@v5
-        env:
-          VALIDATE_ALL_CODEBASE: true
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    name: "Called: GitHub Super Linter"
+    uses: pandemonium1986/.github/.github/workflows/called-linter.yml@main
+    secrets:
+      github-token: inherit
