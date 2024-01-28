@@ -1,0 +1,16 @@
+---
+pip_install_package_update: false
+pip_packages:
+  # - ansible
+  # - ansible-lint
+  - asciinema
+  - beautysh
+  - gita
+  # - gitlint
+  - httpie
+  # - jq
+  # - molecule
+  # - molecule-docker
+  - yamllint
+pip_user: pandemonium
+pip_extra_args: "--user"

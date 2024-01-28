@@ -1,8 +1,48 @@
 # Ansible Playbook - test
 
+[![GitHub Super Linter](https://github.com/Pandemonium1986/ansible-playbook-test/actions/workflows/linter.yml/badge.svg)](https://github.com/Pandemonium1986/ansible-playbook-test/actions/workflows/linter.yml)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 ![Github license](https://img.shields.io/github/license/Pandemonium1986/ansible-playbook-test.svg?logo=github)
 
 A simple playbook to test my ansible roles and collections.
+
+## Getting Started
+
+This playbook serves as a smoke test for all my roles and collections. It is, however, exhaustive and correctly configured, making it a template for use in a real functional context.
+
+
+### Prerequisites
+
+Go to the [Built With](#built-with) section
+
+### Installing
+
+Clone repository
+
+```sh
+mkdir -p ~/git/pandemonium1986/ && \
+cd ~/git/pandemonium1986/ && \
+git clone git@github.com:Pandemonium1986/ansible-playbook-test.git && \
+cd ~/git/pandemonium1986/ansible-playbook-test
+```
+
+
+## Running the tests
+
+To run the smokes tests, simply run the playbook.
+
+```yaml
+cd ~/git/pandemonium1986/ansible-playbook-test && \
+ansible-galaxy install -r requirements.yml && \
+ansible-playbook playbook.yml
+```
+
+## Built With
+
+- [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/index.html) - Provisioning
+- [Vagrant](https://www.vagrantup.com/downloads.html) - To build and manage the box.
+- [VirtualBox](https://www.virtualbox.org/wiki/Downloads) - The only provider available.
+
 
 ## Contributing
 
@@ -26,7 +66,7 @@ Also every commit MUST follow the [conventional commits](https://www.conventiona
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Pandemonium1986/ansible-playbook-test/tags).
 
 ## Authors
 

@@ -1,0 +1,5 @@
+---
+ohmyzsh_users:
+  - user_name: pandemonium
+    user_group: pandemonium
+    user_home: /home/pandemonium/

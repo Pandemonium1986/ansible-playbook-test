@@ -25,38 +25,38 @@ Vagrant.configure("2") do |config|
 
   # Centos box
   config.vm.define "ansible-cts" do |cts|
-    cts.vm.box = "pandemonium/centos7"
-    cts.vm.box_version = ">= 1.0.0"
+    cts.vm.box = "generic/centos7"
+    cts.vm.box_version = ">= 4.3.12"
     cts.vm.hostname = "ansible-cts"
-    cts.vm.network "private_network", ip: "192.168.66.20"
+    cts.vm.network "private_network", ip: "192.168.56.20"
     cts.vm.post_up_message = "Starting ansible-cts"
   end
 
   # Debian box
   config.vm.define "ansible-deb" do |deb|
-    deb.vm.box = "pandemonium/debian10"
-    deb.vm.box_version = ">= 1.0.0"
+    deb.vm.box = "generic/debian12"
+    deb.vm.box_version = ">= 4.3.12"
     deb.vm.hostname = "ansible-deb"
-    deb.vm.network "private_network", ip: "192.168.66.21"
+    deb.vm.network "private_network", ip: "192.168.56.21"
     deb.vm.post_up_message = "Starting ansible-deb"
   end
 
   # Ubuntu box
   config.vm.define "ansible-ubt" do |ubt|
-    ubt.vm.box = "pandemonium/ubuntu1804"
-    ubt.vm.box_version = ">= 1.0.0"
+    ubt.vm.box = "generic/ubuntu2204"
+    ubt.vm.box_version = ">= 4.3.12"
     ubt.vm.hostname = "ansible-ubt"
-    ubt.vm.network "private_network", ip: "192.168.66.22"
+    ubt.vm.network "private_network", ip: "192.168.56.22"
     ubt.vm.post_up_message = "Starting ansible-ubt"
   end
 
   # Mint box
-  config.vm.define "ansible-mnt" do |mnt|
-    mnt.vm.box = "pandemonium/mint1903"
-    mnt.vm.box_version = ">= 1.0.0"
-    mnt.vm.hostname = "ansible-mnt"
-    mnt.vm.network "private_network", ip: "192.168.66.23"
-    mnt.vm.post_up_message = "Starting ansible-mnt"
+  config.vm.define "ansible-sls" do |sls|
+    sls.vm.box = "generic/opensuse15"
+    sls.vm.box_version = ">= 4.3.12"
+    sls.vm.hostname = "ansible-sls"
+    sls.vm.network "private_network", ip: "192.168.56.23"
+    sls.vm.post_up_message = "Starting ansible-sls"
   end
 
 end

@@ -1,14 +1,14 @@
 ---
 roles:
-  - name: pandemonium1986.ansible
-    version: 2.3.1
   - name: pandemonium1986.init
-    version: 2.4.1
+    version: "4.1.1"
   - name: pandemonium1986.ohmyzsh
-    version: 2.3.0
+    version: "4.1.0"
   - name: pandemonium1986.pip
-    version: 2.1.0
+    version: "4.1.0"
+
 collections:
   - name: pandemonium1986.k8s_toolbox
-    version: 1.0.0
-    source: https://galaxy.ansible.com
+    version: "2.3.0"
+  - name: community.general
+    version: "8.1.0"
