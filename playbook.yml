@@ -4,22 +4,39 @@
   become: true
   become_method: sudo
   become_user: root
-  collections:
-    - pandemonium1986.k8s_toolbox
+  vars_files:
+    - vars/init.yml
+    - vars/ohmyzsh.yml
+    - vars/pip.yml
   tasks:
-    - import_role:
+    - name: "Import pandemonium1986 init role"
+      ansible.builtin.import_role:
         name: pandemonium1986.init
-    - import_role:
-        name: pandemonium1986.ansible
-    - import_role:
+
+    - name: "Import pandemonium1986 ohmyzsh role"
+      ansible.builtin.import_role:
         name: pandemonium1986.ohmyzsh
-    - import_role:
-        name: minikube
-    - import_role:
-        name: kubectx
-    - import_role:
-        name: k9s
-    - import_role:
-        name: stern
-    - import_role:
-        name: helm
+
+    - name: "Import pandemonium1986 pip role"
+      ansible.builtin.import_role:
+        name: pandemonium1986.pip
+
+    - name: "Import pandemonium1986.k8s_toolbox kubectl role"
+      ansible.builtin.import_role:
+        name: pandemonium1986.k8s_toolbox.kubectl
+
+    - name: "Import pandemonium1986.k8s_toolbox kubectx role"
+      ansible.builtin.import_role:
+        name: pandemonium1986.k8s_toolbox.kubectx
+
+    - name: "Import pandemonium1986.k8s_toolbox ink9sit role"
+      ansible.builtin.import_role:
+        name: pandemonium1986.k8s_toolbox.k9s
+
+    - name: "Import pandemonium1986.k8s_toolbox minikube role"
+      ansible.builtin.import_role:
+        name: pandemonium1986.k8s_toolbox.minikube
+
+    - name: "Import pandemonium1986.k8s_toolbox stern role"
+      ansible.builtin.import_role:
+        name: pandemonium1986.k8s_toolbox.stern
